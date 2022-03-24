@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/vars.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/sobre.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="./css/planos.css" rel="stylesheet">
+    <link href="css/rodape.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Code+Pro:wght@700&display=swap');</style>
+    <title>Sobre - Code>Go!</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxs-terminal icon'></i>
+            <div class="logo_name"><a href="landing.html">Code>Go!</a></div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="sobre.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Sobre</span>
+                </a>
+                <span class="tooltip">Sobre</span>
+            </li>
+            <li>
+                <a href="planos.html">
+                    <i class='bx bx-cart'></i>
+                    <span class="links_name">Planos</span>
+                </a>
+                <span class="tooltip">Planos</span>
+            </li>
+            <li>
+                <a href="cursos.html">
+                    <i class='bx bxs-graduation'></i>
+                    <span class="links_name">Cursos</span>
+                </a>
+                <span class="tooltip">Cursos</span>
+            </li>
+
+            <li>
+                <a href="./Visao/contato.php">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Contato</span>
+                </a>
+                <span class="tooltip">Contato</span>
+            </li>
+            <li>
+
+            <li class="profile">
+                <div class="profile-details">
+                    <div class="name_job">
+                        <div class="name">Code>Go!</div>
+                        <div class="job">Cursos de Tecnologia</div>
+                    </div>
+                    <i class='bx bx-code-alt' id="log_out"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <section class="planos container">
+            <h1 class="conteudo__titulo">Cursos Code>Go!</h1>
+            <br>
+            <br>
+            <ul class="planos__cartoes">
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">Python</h3>
+                    <div class="cartao__conteudo ">
+                        <img src="img/python.png" class="foto_Laura">
+                        <a href="https://www.python.org/"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">Java</h3>
+                    <div class="cartao__conteudo">
+                        <img src="img/java.png" class="foto_Leo">
+                        <a href="https://dev.java/"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">PHP</h3>
+                    <div class="cartao__conteudo">
+                        <img src="img/php.png" class="foto_Tauany">
+                        <a href="https://www.php.net/"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="planos container">
+            <ul class="planos__cartoes">
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">Git</h3>
+                    <div class="cartao__conteudo ">
+                        <img src="img/git.png" class="foto_Laura">
+                        <a href="https://git-scm.com/"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">SQL</h3>
+                    <div class="cartao__conteudo">
+                        <img src="img/sql.png" class="foto_Leo">
+                        <a href="https://www.microsoft.com/pt-br/sql-server/sql-server-2019"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+                <li class="cartao cartao--ultra">
+                    <h3 class="cartao__titulo">Ruby</h3>
+                    <div class="cartao__conteudo">
+                        <img src="img/ruby.png" class="foto_Tauany">
+                        <a href="https://www.ruby-lang.org/pt/"
+                            class="cartao__botao cartao__botao--ultra botao" target="_blank">Saiba Mais</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
+
+    <div class="home-section_f">
+        <footer class="rodape">
+            <img src="img/Screenshot_20210907-120233_Logo_Maker.jpg" alt="Logo da Apeperia" class="rodape__logo">
+            <ul class="rodape__social">
+                <li><a href="#" class="rodape__midia"><img src="img/facebook.png" alt="Ícone do Facebook"></a></li>
+                <li><a href="#" class="rodape__midia"><img src="img/twitter.png" alt="Ícone do Twitter"></a></li>
+                <li><a href="#" class="rodape__midia"><img src="img/instagram.png" alt="Ícone do Instagram"></a></li>
+            </ul>
+            <nav>
+                <ul class="rodape__navegacao">
+                    <li class="rodape__link"><a href="sobre.html">Sobre</a></li>
+                    <li class="rodape__link"><a href="planos.html">Planos</a></li>
+                    <li class="rodape__link"><a href="cursos.html">Cursos</a></li>
+                    <li class="rodape__link"><a href="./Visao/contato.php">Contato</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
